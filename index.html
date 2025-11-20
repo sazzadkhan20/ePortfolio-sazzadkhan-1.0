@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sazzad | Full-Stack Developer & Competitive Programmer</title>
+    <title>Sazzad | Competitive Programmer & Full-Stack Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -121,13 +121,13 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 14px 32px;
+            padding: 12px 20px;
             background: var(--gradient);
             color: white;
             border: none;
             border-radius: var(--border-radius);
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 0.85rem;
             font-weight: 600;
             transition: var(--transition);
             text-transform: uppercase;
@@ -417,11 +417,26 @@
             animation: fadeInUp 1s ease 0.2s both;
         }
 
+        /* Updated Hero Buttons */
         .hero-btns {
             display: flex;
-            gap: 1.5rem;
+            gap: 1rem;
             margin-bottom: 3rem;
             animation: fadeInUp 1s ease 0.4s both;
+            flex-wrap: wrap;
+        }
+
+        .hero-btns .btn {
+            padding: 12px 20px;
+            font-size: 0.85rem;
+            justify-content: center;
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .hero-btns .btn i {
+            font-size: 0.8rem;
         }
 
         .hero .btn-outline {
@@ -443,9 +458,8 @@
         }
 
         .hero-image img {
-            max-width: 55%;
+            max-width: 90%;
             border-radius: var(--border-radius);
-            box-shadow: var(--shadow-lg);
         }
 
         .floating-card {
@@ -774,7 +788,7 @@
             font-size: 0.9rem;
         }
 
-        /* Projects Section */
+        /* Projects Section - FIXED */
         .projects {
             background: var(--light);
         }
@@ -844,25 +858,18 @@
 
         .project-img {
             height: 220px;
-            background: var(--gradient);
+            background: white; /* Changed from green to white */
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            font-weight: 700;
             position: relative;
             overflow: hidden;
         }
 
-        .project-img:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.2);
+        .project-img img {
+            max-width: 80%;
+            max-height: 100%;
+            object-fit: contain;
         }
 
         .project-content {
@@ -906,7 +913,7 @@
             font-weight: 500;
         }
 
-        /* Project Modal */
+        /* Project Modal - FIXED */
         .project-modal {
             display: none;
             position: fixed;
@@ -972,9 +979,9 @@
         }
 
         .modal-body img {
-            width: 100%;
+            width: 35%;
             border-radius: var(--border-radius);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
         }
 
         .modal-features {
@@ -1086,123 +1093,6 @@
         .achievement-card h3 {
             margin-bottom: 1rem;
             color: var(--primary);
-        }
-
-        /* Research Section */
-        .research {
-            background: var(--light);
-        }
-
-        .research-tabs {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .research-tab {
-            padding: 0.8rem 1.8rem;
-            background: white;
-            border: none;
-            border-radius: 30px;
-            font-weight: 500;
-            color: var(--text);
-            cursor: pointer;
-            transition: var(--transition);
-            box-shadow: var(--shadow);
-        }
-
-        .dark-mode .research-tab {
-            background: #1e293b;
-            color: var(--text);
-        }
-
-        .research-tab.active,
-        .research-tab:hover {
-            background: var(--gradient);
-            color: white;
-            transform: translateY(-3px);
-        }
-
-        .research-content {
-            display: none;
-        }
-
-        .research-content.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .research-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .research-card {
-            background: white;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
-        .dark-mode .research-card {
-            background: #1e293b;
-        }
-
-        .research-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .research-img {
-            height: 200px;
-            background: var(--gradient);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            font-weight: 700;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .research-content-inner {
-            padding: 1.8rem;
-        }
-
-        .research-content-inner h3 {
-            margin-bottom: 0.8rem;
-            color: var(--primary);
-        }
-
-        .research-meta {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-            color: var(--text-light);
-        }
-
-        .research-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .research-links a {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            font-weight: 500;
         }
 
         /* Experience Section */
@@ -1318,99 +1208,6 @@
             box-shadow: var(--shadow);
         }
 
-        /* Contact Section */
-        .contact {
-            background: var(--light);
-        }
-
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1.5rem;
-        }
-
-        .contact-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--gradient);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: white;
-            flex-shrink: 0;
-        }
-
-        .contact-text h3 {
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-form {
-            background: white;
-            padding: 2.5rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-        }
-
-        .dark-mode .contact-form {
-            background: #1e293b;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-            color: var(--dark);
-        }
-
-        .dark-mode .form-group label {
-            color: var(--text);
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 14px;
-            border: 1px solid var(--gray);
-            border-radius: var(--border-radius);
-            background: var(--light);
-            font-family: inherit;
-            transition: var(--transition);
-        }
-
-        .dark-mode .form-control {
-            background: #0f172a;
-            border-color: #334155;
-            color: var(--text);
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(52, 159, 136, 0.1);
-        }
-
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
-        }
-
         /* Footer */
         footer {
             background: var(--dark);
@@ -1424,7 +1221,7 @@
 
         .footer-content {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
+            grid-template-columns: 2fr 1fr 1fr;
             gap: 3rem;
             margin-bottom: 3rem;
         }
@@ -1488,6 +1285,23 @@
             font-size: 0.9rem;
         }
 
+        /* Professional Title Styling */
+        .professional-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary-light);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-left: 3px solid var(--primary);
+            padding-left: 15px;
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+
         /* Official Logo Styles */
         .official-logo {
             width: 24px;
@@ -1500,8 +1314,7 @@
         /* Responsive Design */
         @media (max-width: 992px) {
             .hero-content,
-            .about-content,
-            .contact-content {
+            .about-content {
                 grid-template-columns: 1fr;
             }
 
@@ -1599,6 +1412,11 @@
             .tech-logos {
                 grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
             }
+
+            .professional-title {
+                font-size: 1rem;
+                letter-spacing: 1px;
+            }
         }
     </style>
 </head>
@@ -1620,7 +1438,7 @@
     <header>
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo">
+                <a href="#home" class="logo">
                     <span>MD Sazzad Khan</span>
                 </a>
                 <ul class="nav-links">
@@ -1629,8 +1447,7 @@
                     <li><a href="#skills" class="nav-link">Skills</a></li>
                     <li><a href="#projects" class="nav-link">Projects</a></li>
                     <li><a href="#achievements" class="nav-link">Achievements</a></li>
-                    <li><a href="#research" class="nav-link">Research</a></li>
-                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#experience" class="nav-link">Education</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
                 <div class="nav-actions">
@@ -1654,15 +1471,18 @@
                     <p>Competitive Programmer & Full-Stack Developer passionate about creating innovative solutions and solving complex problems.</p>
                     <div class="hero-btns">
                         <a href="#projects" class="btn">
-                            <i class="fas fa-rocket"></i> Discover My Work
+                            <i class="fas fa-rocket"></i> My Work
                         </a>
                         <a href="#contact" class="btn btn-outline">
                             <i class="fas fa-paper-plane"></i> Contact
                         </a>
+                        <a href="Resources/Sazzad_Resume.pdf" class="btn btn-cv" download="Sazzad_Khan_Resume.pdf">
+                            <i class="fas fa-download"></i> Resume
+                        </a>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="Resources/profile.png" alt="Sazzad">
+                    <img src="Resources/Sazzad1.0.png" alt="Sazzad">
                 </div>
             </div>
             <div class="scroll-indicator">
@@ -1748,13 +1568,13 @@
                     <div class="tech-logos">
                         <div class="tech-logo">
                             <div class="tech-icon" style="color: #A8B9CC;">
-                                <i class="fas fa-c"></i>
+                                <img src="Resources/C_Logo.png" alt="C" width="30">
                             </div>
                             <div class="tech-name">C</div>
                         </div>
                         <div class="tech-logo">
                             <div class="tech-icon" style="color: #00599C;">
-                                <i class="fas fa-c"></i>
+                                <img src="Resources/Cpp_logo.jpg" alt="C++" width="30">
                             </div>
                             <div class="tech-name">C++</div>
                         </div>
@@ -1766,7 +1586,7 @@
                         </div>
                         <div class="tech-logo">
                             <div class="tech-icon" style="color: #68217A;">
-                                <i class="fas fa-c"></i>
+                                <img src="Resources/csharp_logo.png" alt="C#" width="30">
                             </div>
                             <div class="tech-name">C#</div>
                         </div>
@@ -1784,7 +1604,7 @@
                         </div>
                         <div class="tech-logo">
                             <div class="tech-icon" style="color: #3178C6;">
-                                <i class="fas fa-code"></i>
+                                <img src="Resources/tslogo.png" alt="TS" width="30">
                             </div>
                             <div class="tech-name">TypeScript</div>
                         </div>
@@ -1808,7 +1628,7 @@
                         </div>
                         <div class="tech-logo">
                             <div class="tech-icon" style="color: #06B6D4;">
-                                <i class="fas fa-wind"></i>
+                                <img src="Resources/tailwindlogo.png" alt="tailwind" width="40">
                             </div>
                             <div class="tech-name">Tailwind CSS</div>
                         </div>
@@ -1826,7 +1646,9 @@
                         </div>
                         <div class="tech-logo">
                             <div class="tech-icon" style="color: #000000;">
-                                <i class="fas fa-arrow-right"></i>
+                                <img src="Resources/nextjs.png" 
+                                alt="Next.js" 
+                                width="40">
                             </div>
                             <div class="tech-name">Next.js</div>
                         </div>
@@ -1838,9 +1660,9 @@
                     <div class="tech-logos">
                         <div class="tech-logo">
                             <div class="tech-icon" style="color: #339933;">
-                                <i class="fab fa-node-js"></i>
+                                <img src="Resources/nestjs.svg" alt="Nest.js" width="40">
                             </div>
-                            <div class="tech-name">Node.js</div>
+                            <div class="tech-name">Nest.js</div>
                         </div>
                         <div class="tech-logo">
                             <div class="tech-icon" style="color: #777BB4;">
@@ -1850,7 +1672,7 @@
                         </div>
                         <div class="tech-logo">
                             <div class="tech-icon" style="color: #512BD4;">
-                                <i class="fas fa-dot-circle"></i>
+                                <img src="Resources/netlogo.png" alt="ASP.NET" width="40">
                             </div>
                             <div class="tech-name">ASP.NET</div>
                         </div>
@@ -1862,7 +1684,7 @@
                         </div>
                         <div class="tech-logo">
                             <div class="tech-icon" style="color: #092E20;">
-                                <i class="fab fa-python"></i>
+                                <img src="Resources/django.png" alt="Django" width="40">
                             </div>
                             <div class="tech-name">Django</div>
                         </div>
@@ -1874,13 +1696,13 @@
                     <div class="tech-logos">
                         <div class="tech-logo">
                             <div class="tech-icon" style="color: #336791;">
-                                <i class="fas fa-database"></i>
+                                <img src="Resources/postgre.svg" alt="postgreSQL" width="30">
                             </div>
                             <div class="tech-name">PostgreSQL</div>
                         </div>
                         <div class="tech-logo">
                             <div class="tech-icon" style="color: #4479A1;">
-                                <i class="fas fa-database"></i>
+                                <img src="Resources/mysql.png" alt="MySQL" width="50">
                             </div>
                             <div class="tech-name">MySQL</div>
                         </div>
@@ -1892,7 +1714,7 @@
                         </div>
                         <div class="tech-logo">
                             <div class="tech-icon" style="color: #CC2927;">
-                                <i class="fas fa-database"></i>
+                                <img src="Resources/mcsql.jpg" alt="SQL Server" width="40">
                             </div>
                             <div class="tech-name">SQL Server</div>
                         </div>
@@ -1932,7 +1754,7 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects Section - FIXED -->
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-title">
@@ -1942,22 +1764,24 @@
             
             <div class="project-filters">
                 <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="web">Web Apps</button>
-                <button class="filter-btn" data-filter="mobile">Mobile</button>
-                <button class="filter-btn" data-filter="algorithm">Algorithms</button>
+                <button class="filter-btn" data-filter="web">Web Applications</button>
+                <button class="filter-btn" data-filter="desktop">Desktop Applications</button>
             </div>
             
             <div class="project-grid">
                 <div class="project-card" data-category="web">
-                    <div class="project-img">E-Commerce Platform</div>
+                    <div class="project-img">
+                        <img src="Resources/Ekseatlogo.jpg" alt="EkSeat Ride-Sharing Application">
+                    </div>
                     <div class="project-content">
-                        <h3>Full-Stack E-Commerce</h3>
-                        <p>A complete e-commerce solution with user authentication, product management, and payment integration.</p>
+                        <h3>Full-Stack Ride-Sharing Application</h3>
+                        <p>Developed a responsive website for a Ride-sharing application featuring a One seat booking system.</p>
                         <div class="project-tags">
-                            <span class="project-tag">React</span>
-                            <span class="project-tag">Node.js</span>
-                            <span class="project-tag">MongoDB</span>
-                            <span class="project-tag">Stripe API</span>
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">MySQL</span>
+                            <span class="project-tag">PHP</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="btn project-learn-more" data-project="1">Learn More</a>
@@ -1965,16 +1789,17 @@
                     </div>
                 </div>
                 
-                <div class="project-card" data-category="web">
-                    <div class="project-img">Task Management App</div>
+                <div class="project-card" data-category="desktop">
+                    <div class="project-img">
+                        <img src="Resources/BDRailway.png" alt="Bangladesh Railway E-Ticket System">
+                    </div>
                     <div class="project-content">
-                        <h3>Productivity Dashboard</h3>
-                        <p>A collaborative task management application with real-time updates and team collaboration features.</p>
+                        <h3>Bangladesh Railway e-ticket System</h3>
+                        <p>Bangladesh Railway E-Ticket System that allows users to search trains, check seat availability, book tickets, and manage reservations.</p>
                         <div class="project-tags">
-                            <span class="project-tag">Next.js</span>
-                            <span class="project-tag">Nest.js</span>
-                            <span class="project-tag">PostgreSQL</span>
-                            <span class="project-tag">Socket.io</span>
+                            <span class="project-tag">Java</span>
+                            <span class="project-tag">Java Swing</span>
+                            <span class="project-tag">Oracle SQL</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="btn project-learn-more" data-project="2">Learn More</a>
@@ -1982,16 +1807,18 @@
                     </div>
                 </div>
                 
-                <div class="project-card" data-category="algorithm">
-                    <div class="project-img">Algorithm Visualizer</div>
+                <div class="project-card" data-category="desktop">
+                    <div class="project-img">
+                        <img src="Resources/EarthCove.png" alt="EarthCove Travel Agency">
+                    </div>
                     <div class="project-content">
-                        <h3>Competitive Programming Tool</h3>
-                        <p>An interactive platform to visualize and understand complex algorithms and data structures.</p>
+                        <h3>EarthCove Travel Agency</h3>
+                        <p>EarthCove is a travel management platform where users can book tours, customize travel packages, and reserve hotels seamlessly.</p>
                         <div class="project-tags">
-                            <span class="project-tag">JavaScript</span>
-                            <span class="project-tag">D3.js</span>
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">Flask</span>
+                            <span class="project-tag">C#</span>
+                            <span class="project-tag">WinForms</span>
+                            <span class="project-tag">SQL Server</span>
+                            <span class="project-tag">Entity Framework</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="btn project-learn-more" data-project="3">Learn More</a>
@@ -2002,54 +1829,48 @@
         </div>
     </section>
 
-    <!-- Project Modals -->
+    <!-- Project Modals - FIXED -->
     <div class="project-modal" id="project-modal-1">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Full-Stack E-Commerce Platform</h3>
+                <h3>Full-Stack Ride-Sharing Application</h3>
                 <button class="modal-close">&times;</button>
             </div>
             <div class="modal-body">
-                <div class="project-img">E-Commerce Platform</div>
-                <p>This is a complete e-commerce solution built with modern technologies. It includes user authentication, product management, shopping cart functionality, and secure payment processing.</p>
+                <img src="Resources/EkseatNobg.png" style="width:30%;" alt="EkSeat Ride-Sharing Application">
+                <p>EkSeat is a responsive web application for ride-sharing with a unique one-seat booking system that allows users to share rides efficiently and reduce transportation costs.</p>
                 
                 <div class="modal-features">
                     <h4>Key Features:</h4>
                     <ul>
-                        <li>User registration and authentication with JWT</li>
-                        <li>Product catalog with search and filtering</li>
-                        <li>Shopping cart and wishlist functionality</li>
-                        <li>Secure payment processing with Stripe</li>
-                        <li>Order management and tracking system</li>
-                        <li>Admin dashboard for product and order management</li>
-                        <li>Email notifications for order updates</li>
-                        <li>Product reviews and ratings system</li>
+                        <li>User registration and authentication system</li>
+                        <li>Real-time ride search and booking</li>
+                        <li>One-seat booking system for cost efficiency</li>
+                        <li>Driver and passenger matching algorithm</li>
+                        <li>Payment integration for seamless transactions</li>
+                        <li>Rating and review system for users</li>
+                        <li>Interactive map for route visualization</li>
+                        <li>Admin panel for managing users and rides</li>
                     </ul>
                 </div>
                 
                 <div class="modal-features">
                     <h4>Technologies Used:</h4>
                     <div class="project-tags">
-                        <span class="project-tag">React</span>
-                        <span class="project-tag">Node.js</span>
-                        <span class="project-tag">Express</span>
-                        <span class="project-tag">MongoDB</span>
-                        <span class="project-tag">Stripe API</span>
-                        <span class="project-tag">JWT</span>
-                        <span class="project-tag">Redux</span>
-                        <span class="project-tag">Material-UI</span>
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">PHP</span>
+                        <span class="project-tag">MySQL</span>
+                        <span class="project-tag">Bootstrap</span>
+                        <span class="project-tag">jQuery</span>
                     </div>
                 </div>
                 
                 <div class="github-repo">
                     <h4>GitHub Repository</h4>
                     <p>Explore the complete source code and documentation:</p>
-                    <a href="#" class="btn"><i class="fab fa-github"></i> View on GitHub</a>
-                </div>
-                
-                <div class="project-links" style="margin-top: 2rem;">
-                    <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                    <a href="#" class="btn btn-outline"><i class="fas fa-download"></i> Download Project</a>
+                    <a href="https://github.com/sazzadkhan20/EkSeat.com---PHP-Project" target="_blank" class="btn"><i class="fab fa-github"></i> View on GitHub</a>
                 </div>
             </div>
         </div>
@@ -2058,50 +1879,40 @@
     <div class="project-modal" id="project-modal-2">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Productivity Dashboard</h3>
+                <h3>Bangladesh Railway E-Ticket System</h3>
                 <button class="modal-close">&times;</button>
             </div>
             <div class="modal-body">
-                <div class="project-img">Task Management App</div>
-                <p>A comprehensive task management application designed for teams to collaborate effectively. It features real-time updates, project tracking, and team management capabilities.</p>
+                <img src="Resources/BDRailway.png" alt="Bangladesh Railway E-Ticket System">
+                <p>A comprehensive desktop application for Bangladesh Railway that enables users to search for trains, check seat availability, book tickets, and manage reservations efficiently.</p>
                 
                 <div class="modal-features">
                     <h4>Key Features:</h4>
                     <ul>
-                        <li>Real-time task updates and notifications</li>
-                        <li>Team collaboration and assignment</li>
-                        <li>Project progress tracking with Gantt charts</li>
-                        <li>File sharing and comments system</li>
-                        <li>Calendar integration and deadline management</li>
-                        <li>Customizable workflows and templates</li>
-                        <li>Time tracking and reporting</li>
-                        <li>Mobile-responsive design</li>
+                        <li>Train schedule and route information</li>
+                        <li>Real-time seat availability checking</li>
+                        <li>User registration and authentication</li>
+                        <li>Ticket booking and cancellation system</li>
+                        <li>Payment processing integration</li>
+                        <li>Ticket printing functionality</li>
+                        <li>Admin panel for managing trains and schedules</li>
+                        <li>Database management for user and booking data</li>
                     </ul>
                 </div>
                 
                 <div class="modal-features">
                     <h4>Technologies Used:</h4>
                     <div class="project-tags">
-                        <span class="project-tag">Next.js</span>
-                        <span class="project-tag">Nest.js</span>
-                        <span class="project-tag">PostgreSQL</span>
-                        <span class="project-tag">Socket.io</span>
-                        <span class="project-tag">TypeScript</span>
-                        <span class="project-tag">Tailwind CSS</span>
-                        <span class="project-tag">Prisma</span>
-                        <span class="project-tag">Redis</span>
+                        <span class="project-tag">Java</span>
+                        <span class="project-tag">Java Swing</span>
+                        <span class="project-tag">Oracle SQL</span>
                     </div>
                 </div>
                 
                 <div class="github-repo">
                     <h4>GitHub Repository</h4>
                     <p>Explore the complete source code and documentation:</p>
-                    <a href="#" class="btn"><i class="fab fa-github"></i> View on GitHub</a>
-                </div>
-                
-                <div class="project-links" style="margin-top: 2rem;">
-                    <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                    <a href="#" class="btn btn-outline"><i class="fas fa-download"></i> Download Project</a>
+                    <a href="https://github.com/sazzadkhan20/Bangladesh-Railway-e-ticket-System" target = "_blank" class="btn"><i class="fab fa-github"></i> View on GitHub</a>
                 </div>
             </div>
         </div>
@@ -2110,50 +1921,42 @@
     <div class="project-modal" id="project-modal-3">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Algorithm Visualizer</h3>
+                <h3>EarthCove Travel Agency</h3>
                 <button class="modal-close">&times;</button>
             </div>
             <div class="modal-body">
-                <div class="project-img">Algorithm Visualizer</div>
-                <p>An interactive educational tool that helps students and developers understand complex algorithms through visualization. It covers sorting, searching, graph algorithms, and data structures.</p>
+                <img src="Resources/EarthCove.png" alt="EarthCove Travel Agency">
+                <p>EarthCove is a comprehensive travel management platform where users can book tours, customize travel packages, and reserve hotels seamlessly through an intuitive desktop application.</p>
                 
                 <div class="modal-features">
                     <h4>Key Features:</h4>
                     <ul>
-                        <li>Visualization of sorting algorithms (Bubble Sort, Quick Sort, etc.)</li>
-                        <li>Graph algorithm animations (Dijkstra, BFS, DFS)</li>
-                        <li>Data structure demonstrations (Trees, Hash Tables, etc.)</li>
-                        <li>Step-by-step execution with speed control</li>
-                        <li>Code explanation alongside visualization</li>
-                        <li>Custom input options for algorithms</li>
-                        <li>Performance comparison between algorithms</li>
-                        <li>Educational explanations and use cases</li>
+                        <li>Tour package browsing and booking</li>
+                        <li>Customizable travel itineraries</li>
+                        <li>Hotel reservation system</li>
+                        <li>User profile management</li>
+                        <li>Payment gateway integration</li>
+                        <li>Booking history and tracking</li>
+                        <li>Admin panel for managing tours and hotels</li>
+                        <li>Customer support and feedback system</li>
                     </ul>
                 </div>
                 
                 <div class="modal-features">
                     <h4>Technologies Used:</h4>
                     <div class="project-tags">
-                        <span class="project-tag">JavaScript</span>
-                        <span class="project-tag">D3.js</span>
-                        <span class="project-tag">Python</span>
-                        <span class="project-tag">Flask</span>
-                        <span class="project-tag">HTML5 Canvas</span>
-                        <span class="project-tag">CSS3</span>
-                        <span class="project-tag">WebGL</span>
-                        <span class="project-tag">React</span>
+                        <span class="project-tag">C#</span>
+                        <span class="project-tag">WinForms</span>
+                        <span class="project-tag">SQL Server</span>
+                        <span class="project-tag">Entity Framework</span>
+                        <span class="project-tag">LINQ</span>
                     </div>
                 </div>
                 
                 <div class="github-repo">
                     <h4>GitHub Repository</h4>
                     <p>Explore the complete source code and documentation:</p>
-                    <a href="#" class="btn"><i class="fab fa-github"></i> View on GitHub</a>
-                </div>
-                
-                <div class="project-links" style="margin-top: 2rem;">
-                    <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                    <a href="#" class="btn btn-outline"><i class="fas fa-download"></i> Download Project</a>
+                    <a href="https://github.com/sazzadkhan20/EarthCove-----.Net-WinForms-Project" target="_blank" class="btn"><i class="fab fa-github"></i> View on GitHub</a>
                 </div>
             </div>
         </div>
@@ -2168,44 +1971,21 @@
             </div>
             
             <div class="achievements-grid">
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h3>Codeforces Expert</h3>
-                    <p>Achieved Expert rank (1600+) on Codeforces, placing in top 10% of competitive programmers worldwide.</p>
-                </div>
-                
+
                 <div class="achievement-card">
                     <div class="achievement-icon">
                         <i class="fas fa-medal"></i>
                     </div>
-                    <h3>CodeChef 4-Star</h3>
-                    <p>Earned 4-star rating on CodeChef with strong performance in multiple coding contests and challenges.</p>
+                    <h3>CodeChef 2-Star</h3>
+                    <p>Earned 2-star rating on CodeChef with strong performance in multiple coding contests and challenges.</p>
                 </div>
-                
+
                 <div class="achievement-card">
                     <div class="achievement-icon">
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-trophy"></i>
                     </div>
-                    <h3>HackerRank Gold</h3>
-                    <p>Gold badge in Problem Solving and multiple programming languages on HackerRank platform.</p>
-                </div>
-                
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <h3>LeetCode Contest</h3>
-                    <p>Consistently ranked in top 10% in LeetCode weekly and biweekly programming contests.</p>
-                </div>
-                
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-code-branch"></i>
-                    </div>
-                    <h3>Hackathon Winner</h3>
-                    <p>First place in University Hackathon 2022 for developing an innovative healthcare solution.</p>
+                    <h3>Competitive Programming </h3>
+                    <p>Solved 1000+ problems across leading platforms, reflecting strong analytical and algorithmic expertise..</p>
                 </div>
                 
                 <div class="achievement-card">
@@ -2213,115 +1993,7 @@
                         <i class="fas fa-graduation-cap"></i>
                     </div>
                     <h3>Academic Excellence</h3>
-                    <p>Graduated with Summa Cum Laude honors and Departmental Award for Computer Science.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Research Section -->
-    <section id="research" class="research">
-        <div class="container">
-            <div class="section-title">
-                <h2>Research & Publications</h2>
-                <p>My academic research and published works</p>
-            </div>
-            
-            <div class="research-tabs">
-                <button class="research-tab active" data-tab="publications">Publications</button>
-                <button class="research-tab" data-tab="conferences">Conference Papers</button>
-                <button class="research-tab" data-tab="preprints">Preprints</button>
-            </div>
-            
-            <div class="research-content active" id="publications-content">
-                <div class="research-grid">
-                    <div class="research-card">
-                        <div class="research-img">AI Research</div>
-                        <div class="research-content-inner">
-                            <h3>Optimizing Neural Networks for Edge Devices</h3>
-                            <div class="research-meta">
-                                <span><i class="fas fa-calendar"></i> 2023</span>
-                                <span><i class="fas fa-book"></i> Journal of AI Research</span>
-                            </div>
-                            <p>This paper presents a novel approach to optimize deep learning models for deployment on resource-constrained edge devices without significant accuracy loss.</p>
-                            <div class="research-links">
-                                <a href="#"><i class="fas fa-external-link-alt"></i> View Paper</a>
-                                <a href="#"><i class="fas fa-download"></i> Download PDF</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="research-card">
-                        <div class="research-img">Blockchain</div>
-                        <div class="research-content-inner">
-                            <h3>Blockchain-based Secure Voting System</h3>
-                            <div class="research-meta">
-                                <span><i class="fas fa-calendar"></i> 2022</span>
-                                <span><i class="fas fa-book"></i> IEEE Transactions</span>
-                            </div>
-                            <p>A comprehensive analysis of blockchain technology applied to electronic voting systems, ensuring transparency, security, and verifiability.</p>
-                            <div class="research-links">
-                                <a href="#"><i class="fas fa-external-link-alt"></i> View Paper</a>
-                                <a href="#"><i class="fas fa-download"></i> Download PDF</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="research-card">
-                        <div class="research-img">Quantum Computing</div>
-                        <div class="research-content-inner">
-                            <h3>Quantum Algorithms for Optimization Problems</h3>
-                            <div class="research-meta">
-                                <span><i class="fas fa-calendar"></i> 2021</span>
-                                <span><i class="fas fa-book"></i> Quantum Computing Journal</span>
-                            </div>
-                            <p>Exploring the potential of quantum computing to solve complex optimization problems that are intractable for classical computers.</p>
-                            <div class="research-links">
-                                <a href="#"><i class="fas fa-external-link-alt"></i> View Paper</a>
-                                <a href="#"><i class="fas fa-download"></i> Download PDF</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="research-content" id="conferences-content">
-                <div class="research-grid">
-                    <div class="research-card">
-                        <div class="research-img">Conference</div>
-                        <div class="research-content-inner">
-                            <h3>Real-time Anomaly Detection in IoT Networks</h3>
-                            <div class="research-meta">
-                                <span><i class="fas fa-calendar"></i> 2023</span>
-                                <span><i class="fas fa-map-marker-alt"></i> ACM SIGCOMM</span>
-                            </div>
-                            <p>Presented a novel framework for detecting security anomalies in IoT networks using machine learning and stream processing.</p>
-                            <div class="research-links">
-                                <a href="#"><i class="fas fa-external-link-alt"></i> View Slides</a>
-                                <a href="#"><i class="fas fa-download"></i> Download Paper</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="research-content" id="preprints-content">
-                <div class="research-grid">
-                    <div class="research-card">
-                        <div class="research-img">Preprint</div>
-                        <div class="research-content-inner">
-                            <h3>Federated Learning for Privacy-Preserving AI</h3>
-                            <div class="research-meta">
-                                <span><i class="fas fa-calendar"></i> 2023</span>
-                                <span><i class="fas fa-archive"></i> arXiv</span>
-                            </div>
-                            <p>A comprehensive survey of federated learning approaches that enable collaborative model training without sharing raw data.</p>
-                            <div class="research-links">
-                                <a href="#"><i class="fas fa-external-link-alt"></i> View Preprint</a>
-                                <a href="#"><i class="fas fa-download"></i> Download PDF</a>
-                            </div>
-                        </div>
-                    </div>
+                    <p>Graduated with Summa Cum Laude honors and Dean's List Honors for Computer Science.</p>
                 </div>
             </div>
         </div>
@@ -2331,8 +2003,8 @@
     <section id="experience" class="experience">
         <div class="container">
             <div class="section-title">
-                <h2>Experience & Education</h2>
-                <p>My professional journey and academic background</p>
+                <h2>Education</h2>
+                <p>My academic background and qualifications</p>
             </div>
             
             <div class="timeline">
@@ -2342,159 +2014,60 @@
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="timeline-date"><i class="fas fa-calendar-alt"></i> 2022 - Present</div>
-                        <h3>Senior Full-Stack Developer</h3>
-                        <p>Tech Solutions Inc.</p>
-                        <p>Led development of multiple web applications using React, Node.js, and cloud technologies. Improved application performance by 40% through code optimization.</p>
+                        <div class="timeline-date"><i class="fas fa-calendar-alt"></i> 2022 - 2026</div>
+                        <h3>BSc in Computer Science & Engineering</h3>
+                        <p>American International University-Bangladesh</p>
+                        <p>Graduated with honors. Participated in multiple competitive programming contests. Focused on algorithms, data structures, and software engineering principles.</p>
+                        <div class="project-tags" style="margin-top: 1rem;">
+                            <span class="project-tag">CGPA: 3.97/4.0</span>
+                            <span class="project-tag">Dean's</span>
+                            <span class="project-tag">Summa Cum Laude</span>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="timeline-date"><i class="fas fa-calendar-alt"></i> 2020 - 2022</div>
-                        <h3>Software Developer</h3>
-                        <p>Digital Innovations LLC</p>
-                        <p>Developed and maintained web applications using ASP.NET and React. Implemented RESTful APIs and database design.</p>
+                        <div class="timeline-date"><i class="fas fa-calendar-alt"></i> 2018 - 2020</div>
+                        <h3>Higher Secondary Certificate</h3>
+                        <p>Saint Joseph Higher Secondary School</p>
+                        <p>Completed higher secondary education with focus on Mathematics, Physics, and Chemistry. Developed strong analytical and problem-solving skills.</p>
+                        <div class="project-tags" style="margin-top: 1rem;">
+                            <span class="project-tag">GPA: 5.0/5.0</span>
+                            <span class="project-tag">Executive Member Math Club</span>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="timeline-date"><i class="fas fa-calendar-alt"></i> 2016 - 2020</div>
-                        <h3>B.S. Computer Science</h3>
-                        <p>University of Technology</p>
-                        <p>Graduated with honors. Participated in multiple competitive programming contests and hackathons.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date"><i class="fas fa-calendar-alt"></i> 2018</div>
-                        <h3>Competitive Programming Achievement</h3>
-                        <p>ACM-ICPC Regional</p>
-                        <p>Ranked in top 50 teams in the regional competition. Solved complex algorithmic problems under time constraints.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Get In Touch</h2>
-                <p>Feel free to reach out for collaborations or just a friendly hello</p>
-            </div>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Email</h3>
-                            <p>sazzad53913@gmail.com</p>
+                        <div class="timeline-date"><i class="fas fa-calendar-alt"></i> 2016 - 2018</div>
+                        <h3>Secondary School Certificate</h3>
+                        <p>Gosatra Dr. Jalilur Rahman High School</p>
+                        <p>Completed secondary education with excellent results in Science and Mathematics. Developed foundational programming skills through extracurricular activities.</p>
+                        <div class="project-tags" style="margin-top: 1rem;">
+                            <span class="project-tag">GPA: 5.0/5.0</span>
                         </div>
                     </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Location</h3>
-                            <p>Nikunjo 2,Dhaka,Bangladesh</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Phone</h3>
-                            <p>+8801750030406</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-globe"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Professional Profiles</h3>
-                            <div class="social-links">
-                                <a href="https://github.com/sazzadkhan20" class="social-link"><i class="fab fa-github"></i></a>
-                                <a href="https://www.linkedin.com/in/md-sazzad-khan/" class="social-link"><i class="fab fa-linkedin"></i></a>
-                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                                <a href="#" class="social-link"><i class="fab fa-stack-overflow"></i></a>
-                                <a href="https://www.hackerrank.com/profile/Md_Sazzad_Khan" class="social-link"><i class="fab fa-hackerrank"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" class="form-control" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn">
-                            <i class="fas fa-paper-plane"></i> Send Message
-                        </button>
-                    </form>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer id="contact">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
-                    <h3>Sazzad</h3>
-                    <p>Full-Stack Developer & Competitive Programmer passionate about creating innovative solutions and solving complex problems.</p>
+                    <h3>Md Sazzad Khan</h3>
+                    <p class="professional-title">Competitive Programmer | Full-Stack Developer</p>
                     <div class="social-links">
-                        <a href="https://github.com/sazzadkhan20" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/md-sazzad-khan/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/sazzadkhan20" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/md-sazzad-khan/" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-stack-overflow"></i></a>
-                        <a href="https://www.hackerrank.com/profile/Md_Sazzad_Khan" class="social-link"><i class="fab fa-hackerrank"></i></a>
+                        <a href="https://www.hackerrank.com/profile/Md_Sazzad_Khan" class="social-link" target="_blank"><i class="fab fa-hackerrank"></i></a>
                     </div>
-                </div>
-                
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#achievements">Achievements</a></li>
-                        <li><a href="#research">Research</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
                 </div>
                 
                 <div class="footer-col">
@@ -2512,9 +2085,9 @@
                 <div class="footer-col">
                     <h3>Contact Info</h3>
                     <ul class="footer-links">
-                        <li><i class="fas fa-envelope"></i>sazzad53913@gmail.com</li>
+                        <li><i class="fas fa-envelope"></i> sazzad53913@gmail.com</li>
                         <li><i class="fas fa-phone"></i> +8801750030406</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Dhaka,Bangladesh</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Nikunjo 2, Dhaka 1229</li>
                     </ul>
                 </div>
             </div>
@@ -2677,6 +2250,7 @@
         window.addEventListener('scroll', () => {
             let current = '';
             const sections = document.querySelectorAll('section');
+            const footer = document.querySelector('footer');
             
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
@@ -2685,6 +2259,12 @@
                     current = section.getAttribute('id');
                 }
             });
+            
+            // Check if we're at the footer
+            const footerTop = footer.offsetTop;
+            if (scrollY + window.innerHeight >= footerTop + 100) {
+                current = 'contact';
+            }
             
             document.querySelectorAll('.nav-links a').forEach(link => {
                 link.classList.remove('active');
@@ -2717,27 +2297,6 @@
             });
         });
 
-        // Research Tabs
-        const researchTabs = document.querySelectorAll('.research-tab');
-        const researchContents = document.querySelectorAll('.research-content');
-        
-        researchTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                // Update active tab
-                researchTabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                
-                // Show corresponding content
-                const tabId = tab.getAttribute('data-tab');
-                researchContents.forEach(content => {
-                    content.classList.remove('active');
-                    if (content.id === `${tabId}-content`) {
-                        content.classList.add('active');
-                    }
-                });
-            });
-        });
-
         // Project Modals
         const learnMoreButtons = document.querySelectorAll('.project-learn-more');
         const modals = document.querySelectorAll('.project-modal');
@@ -2765,13 +2324,6 @@
             if (e.target.classList.contains('project-modal')) {
                 e.target.style.display = 'none';
             }
-        });
-
-        // Form Submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
         });
 
         // Timeline Animation
